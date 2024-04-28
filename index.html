@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy Tool: Stesha S.</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Spectral:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="logo"   >
+
+    <img src="assets/logo.png"
+      style="
+      padding: 0.5em;
+      width:240px;
+      height:50px;
+      float: left;
+      "/> 
+
+
+
+  </div>
+  <nav> 
+   
+      <ul style="padding:20px;  font-family: 'Trispace', sans-serif;">
+     
+      <li>
+        <a href="index.html">Home</a>
+      </li>
+      <li>
+        <a onclick="toggleChat()"> AI Financial Advisor</a>
+      </li>
+      <li>
+      <a class="nav-link" href="cal.html">Calculator</a>
+      </li>
+      <li>
+        <a href="#abt">About</a>
+      </li>
+        
+    </ul>
+  </nav>
+
+<div class="container" style = "padding-bottom: 150px;">
+  <div class="left-box" style = "padding-top: 40px;">
+
+    <h6> Start Budget Planning Today!</h6>
+    <div class = "h20" style = "padding-left: 10px; font-size: 18px; padding-top: 20px;">
+    <h2> Get Started and recive a personalized savings plan for your financial security</h2>
+    </div>
+    <div class = "h20" style = "padding-top: 40px; padding-left: 40px;">
+    <button> <a class="start" href="cal.html" style="color: white;"> Financial Calculator</a> </button>
+       
+  
+
+    </div>
+  </div>
+  <div class="right-box" style = "padding-top: 50px;">
+<h1> </h1>
+  </div>
+</div>
+
+  
+  <section class="main-section" id="Calcaluator">
+<h4> grwiljngfgew4uefwrjlngrvjlnrgskhgrswkj</h4>
+    <h4> grwiljngfgew4uefwrjlngrvjlnrgskhgrswkj</h4>
+    <h4> grwiljngfgew4uefwrjlngrvjlnrgskhgrswkj</h4>
+  
+    
+    </div>
+     
+    </div>
+    <div class="abt" id="abt">
+    </div>
+    <button class="tablink" onclick="openCity('London', this, '#bd3d3a')" id="defaultOpen">Budget Tool</button>
+    <button class="tablink" onclick="openCity('Paris', this, '#065c27')"> Target Audiance</button>
+    
+    <div id="London" class="tabcontent">
+      
+    </div>
+
+    <div id="Paris" class="tabcontent">
+     
+      
+      
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+<h2> Vision</h2>
+      <h1>
+      This free AI tool is designed to be straightforward to use. It allows anyone to receive a personalized budget plan based on their unique financial circumstances, without needing any prior knowledge or understanding of finance.
+
+</h1>
+    </div>
+
+    <div id="Oslo" class="tabcontent">
+  <h2> Values</h2>
+      <h1>
+      We believe that everyone deserves access to high-quality financial tools, regardless of their background or level of experience. We're committed to user empowerment and inclusivity. We believe in providing accessible and user-friendly financial tools, ensuring that individuals can confidently navigate and enhance their financial well-being. Our dedication to continuous improvement and innovation underscores our mission to make financial literacy an easy and enriching experience for all.
+</h1>
+    </div>
+    
+  
+</div>
+    <button id="chat-button" style = "background-color: blue; font-size: 20px;" onclick="toggleChat()">Interact With Our ChatBot</button>
+    <div class="chat-container" id="chat-container" style = "width: 22%;">
+        <button id="close-button" onclick="toggleChat()">X</button>
+      <div class = "txt-1" style = "font-size: 10px; padding: 20px;">
+      <h2> Hello! Welcome to Smart Dime. I am an AI Finincial Advisor, How may I assist you today?</h2>
+      </div>
+        <div id="terminal-output"></div>
+        <input type="text" id="user-response" placeholder="Type your response">
+        <button onclick="submitResponse()">Submit</button>
+    </div>
+   
+   
+  
+  <!-- FAQ QUESTIONS -->
+  <section class="faqContainer" style  = "color: white;">
+    <div class="faqOne">
+      <h2 class="faqQuestion">  Is your financial literacy tool suitable for beginners?</h2>
+      <div class="faqAnswer">
+        <h3> Yes, our tool is designed for users of all experience levels. It provides a user-friendly interface and educational resources to empower even those new to financial management. </h3>
+      </div>
+    </div>
+
+    <hr class="hr-line">
+
+    <div class="faqTwo">
+      <h2 class="faqQuestion"> Can your tool help me plan for long-term financial goals? </h2>
+      <div class="faqAnswer">
+        <h3>  Absolutely. Our tool includes robust planning features, allowing you to set and achieve long-term goals such as saving for education, buying a home, or retirement.
+
+ </h3>
+      </div>
+    </div>
+
+    <hr class="hr-line">
+
+    <div class="faqThree">
+      <h2 class="faqQuestion"> What is financial literacy?  </h2>
+      <div class="faqAnswer">
+        <h3> Financial Literacy is the knowledge of finance and how you would implement it to make better financial decisions.</h3>
+      </div>
+    </div>
+
+    <hr class="hr-line">
+
+    <div class="faqFour">
+      <h2 class="faqQuestion"> How can your financial literacy tool help me manage my budget effectively? </h2>
+        <div class="faqAnswer">
+          <h3>Our tool provides a user-friendly interface to track income and expenses, set budget goals, and offer real-time insights to optimize your spending.</h3>
+        </div>
+      </div>
+
+    <hr class="hr-line">
+
+    <div class="faqFour">
+      <h2 class="faqQuestion"> How can I get Started?</h2>
+        <div class="faqAnswer">
+          <h3> Enter your financial information and start planning your budget. Our tool will guide you through the process of creating a budget plan that</h3>
+
+          <h7> ________________________</h7>
+
+          <button> <a class="start" href="cal.html" style="color: white; padding-top: 100px;"> Financial Calculator</a> </button>
+        </div>
+      </div>
+
+  </section>
+
+    
+    
+    </section>
+
+  
+  
+  <script src="script.js"></script>
+
+  
+
+ 
+ 
+</body>
+</html>

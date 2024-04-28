@@ -1,0 +1,471 @@
+* { /* Reset the space of the webpage */
+   margin: 0px;
+   padding: 0px;
+}
+
+
+body {
+   font-family: 'Trispace', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+ 
+}
+h1{
+padding: 3.5em;
+  text-align: center;
+  font-size: 20px
+  
+}
+h2{
+  padding-left: 1em;
+}
+
+h4{
+  padding-top: 0.3em;
+  color: white;
+  font-size: 20px;
+}
+h5{
+  padding-top: 2em;
+  color: white;
+  font-size: 20px;
+}
+
+h6{
+  padding-left: 0.5em;
+  font-size: 15px;
+}
+h10{
+  text-align:center;
+  font-size: 50px;
+  
+}
+
+.a{
+  color: white;
+  
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+
+#chat-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 15px 20px; /* Slightly larger */
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.chat-container {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 400px;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#terminal-output {
+    height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+button: hover {
+    background-color: #45a049;
+  color: black;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
+.historyList{
+  color:#ffFf;
+}
+
+
+
+nav{
+  text-align: right;
+  font-size:15px;
+  background-color: white;
+}
+ul{
+  list-style-type: none;
+   background-color: white;
+  overflow: hidden;
+  padding: 3em;
+  margin-bottom: 1em;
+}
+
+li{
+  display: inline;
+   background-color: white;
+}
+li a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.3em;
+  padding: 1em;
+   background-color: white;
+}
+li a: hover{
+  background-color: #38b000;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px; /* Add padding for equal spacing on both sides */
+}
+
+
+
+.left-box {
+  padding: 20px;
+  margin-top: 50px;
+  font-size: 15px;
+}
+
+
+.right-box {
+ 
+  background-image: url("assets/pic.png");
+ background-size: 115%;
+  padding: 10px;
+  background-color: white;
+  /* 
+  Use these two below to determine the height and the position of the right box
+    */
+  margin-top: 60px;
+  height: 500px;
+  width: 700px;
+  padding-right: 0.5px;
+  
+}
+.pics{
+  height: 450px;
+  width: 600px;
+}
+
+@media (max-width: 768px) {
+
+  .container {
+    grid-template-columns: 1fr; 
+  }
+}
+
+h6{
+  font-size: 70px;
+}
+
+.start{
+  font-size: 30px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+}
+
+.start:hover{
+  color: white;
+}
+
+.button:hover{
+  color:black;
+}
+
+.main-section {
+ 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+/* Adjust the height as needed */
+}
+
+.filler {
+  display: flex;
+  align-items: flex-end;
+  height: 100px;
+  border: 50px;
+  border-radius: 10px;
+  border-color: blue;
+  
+}
+
+.loading {
+  background-color: white;
+  background-image: url('VM3x.gif');
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 20vh;
+  background-size: 40%; /* Optional: Adjust the background size as needed */
+  opacity: 0; /* Set initial opacity to 0 */
+  animation: fadeIn 1s forwards 2s; /* Animation name, duration, fill-mode, and delay */
+
+  /* Optional: Add more styles for your text */
+  color: black;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 50vh; /* Adjust as needed for vertical centering */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+.loading-next {
+  position: absolute; /* or fixed depending on your layout needs */
+  right: 0; /* This will position the button to the right from the left */
+  background-color: green; /* Add your desired background color here */
+  padding: 15px 20px; /* Adjust padding as needed (top, right, bottom, left) */
+  color: white; /* Text color */
+  font-size: 18px; /* Adjust font size as needed */
+  border: none; /* Remove default button border */
+  cursor: pointer; /* Add pointer cursor for interaction */
+}
+
+
+
+
+.extra-space{
+  color: black;
+  font-size: 50px;
+}
+
+.message-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  display: inline-block; /* Make the boxes inline */
+}
+
+.result-box {
+  border: 5px solid black;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  display: inline-block;
+  width: 30%; /* Adjust the width as needed */
+  box-sizing: border-box;
+  font-size: 30px;
+}
+
+/* FAQ */
+.faqContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 100px;
+  padding-top: 20px;
+  background-color: #556B2F;
+}
+
+.hr-line{
+  width: 60%;
+  margin: auto;
+}
+
+.faqQuestion {
+  color:white;
+  cursor: pointer;
+  padding: 30px 20px;
+  width: 60%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+
+.faqAnswer{
+  margin: auto;
+  width: 50%; 
+  padding: auto;
+  
+}
+
+.active,
+.faqQuestion:hover {
+    color: #F9F9F9;
+}
+
+.faqAnswer {
+    padding: 0 18px;
+color: white;
+    display: none;
+    overflow: hidden;
+}
+
+.faqQuestion:after {
+    content: '\02795';
+    font-size: 13px;
+    color:white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796";
+}
+/* Style the tab buttons */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: 2px solid black; /* Add a border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+    outline: none;
+    cursor: pointer;
+    padding: 20px 24px;
+    font-size: 17px;
+    width: 50%;
+    margin: 0; /* Remove default margin for better alignment */
+}
+
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 200px;
+  text-align: center;
+  border: 100px;
+  
+}
+h7{
+  color: green;
+}
+/* Style each tab content individually */
+#London {
+  
+  background-image: url('SmartDime.png');
+  background-size: 100%;
+  padding-bottom: 500px;
+}
+#Paris {
+  
+  background-image: url('newpic.png');
+  background-size: 100%;
+  padding-bottom: 500px;
+       }
+#Tokyo {
+  background-color:#d8ae47;
+  
+}
+#Oslo {
+  background-color:#85bb65;
+}
+
+.footer {
+  padding-top: 1000px;
+  background-color: #3e3c3c;
+  display: flex;
+}
+
+.footerText {
+  text-align: left;
+  margin: 0px;
+  margin-left: 70px;
+  padding: 0px;
+  color: white;
+}
+
+#sitemap {
+  padding-top: 2.3em;
+  color: white;
+}
+
+.site {
+  color: white;
+  font-size: 20px;
+}
+
+.siteList {
+  padding-top: 2.5em;
+  padding-left: 100px;
+}
+
+hr {
+  margin-left: 30px;
+  margin-right: 50px;
+}
+
+.donate {
+  padding-top: 5em;
+  padding-left: 20px;
+}
+
+#donate {
+  background-color: #48eaea;
+  border-radius: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Rubik', sans-serif;
+  padding: 8px;
+}
+
+.final {
+  padding-top: 3em;
+  padding-left: 80px;
+  color: white;
+  max-width: 200px;
+}
+
+#footerLogo {
+  height: 100px;
+  border-radius: 50%;
+}
+

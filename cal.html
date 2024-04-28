@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Literacy Tool</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="cal.css">
+  <!--Google fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Trispace:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&family=Spectral:wght@200&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <div class="logo"   >
+
+    <img src="assets/logo.png"
+      style="
+      padding: 0.5em;
+      width:240px;
+      height:50px;
+      float: left;
+      "/> 
+
+
+
+  </div>
+  <nav > 
+
+         <ul style="padding:20px;  font-family: 'Trispace', sans-serif;">
+           <li>
+             <a href="index.html">Home</a>
+           </li>
+           <li>
+             <a onclick="toggleChat()"> AI Financial Advisor</a>
+           </li>
+           <li>
+           <a class="nav-link" href="cal.html">Calculator</a>
+           </li>
+           <!--<li>
+             <a href="#abt">About</a>
+           </li> -->
+            
+    </ul>
+  </nav>
+
+<div class="container">
+  
+</div>
+
+
+  <section class="main-section" id="Calcaluator">
+    <div >
+
+    </div>
+        <button id="chat-button" style = "background-color: blue; font-size: 20px;" onclick="toggleChat()">Interact With Our ChatBot</button>
+        <div class="chat-container" id="chat-container" style = "width: 22%;">
+            <button id="close-button" onclick="toggleChat()">X</button>
+          <div class = "txt-1" style = "font-size: 10px; padding: 20px;">
+          <h1> Hello! Welcome to Smart Dime. I am an AI Finincial Advisor, How may I assist you today?</h1>
+          </div>
+            <div id="terminal-output"></div>
+            <input type="text" id="user-response" placeholder="Type your response">
+            <button onclick="submitResponse()">Submit</button>
+        </div>
+
+    <div style="width: 60%; border: 5px solid black; padding: 10px;  background-color:#BCCEA5; text-align: center">
+      <h4 style="font-size: 40px; color:black;  box-shadow: 0 4px 26px rgba(0, 0, 0, 0.1); background-color:#BCCEA5;">Step 1: Enter your monthly income</h4>
+    </div>
+    <div style="position: absolute; top: 100px; right: 0; width: 30%; text-align: center;">
+        <img src="4530352.png" alt="Image" style="width: 70%;">  
+    </div>
+
+
+    
+
+
+
+
+    <div class = "sec1" style = "padding-top: 150px;">
+    <div class="cal">
+
+        <h1>Financial Literacy Tool</h1>
+        <label for="income">Income:</label>
+        <input type="number" id="income" placeholder="Enter your monthly income"">
+
+
+       <button> <a class="newname" href="#sec2" onclick="calculate()" style ="color: white; border-radius: 4px; text-decoration: none;"> Next</a> </button>
+
+    </div>
+    </div>
+
+    <div style="width: 28%; text-align: center">
+      <img src="3d-man-pushes-the-dollar-on-the-green-arrow-3d-image-isolated-white-background-2M18700-removebg-preview.png" alt="Image" style="width: 70%;"> 
+    </div>
+
+    <div id = "sec2">
+<h1> - </h1>
+    </div>
+    
+    <div class = "sec1" id = "pg"style = "padding-bottom: 150px;">
+
+<div class = "two" style="padding-bottom: 350px;">
+    <div class="cal" style = "max-width: 1500px;" >
+      <h4 style="font-size: 40px; color:black;">Step 2: Enter expenses to keep track of them</h4>
+      <div id="refrence">
+<div class = "rmgStarter" style = "font-size: 30px;">
+         <div id="result"> </div>
+</div>
+      
+    
+        
+       
+      </div>
+      
+     
+      <label for="ename"> Add Expense: </label>
+
+      <input type="text" id="ename" placeholder="Expense Name">
+       <input type="number" id="enumber" placeholder="Amount">
+      <button onclick="addExpense()">Add Expense</button>
+        <label for="ename">Or Scan Recipts </label>
+        <input type="file" id="fileElem" multiple accept="image/*" style = "font-size: 15px; padding-bottom: 20px;">
+      <button onclick="readReceipt(); calculate();">Add Expense</button>
+      <div class = "space" style = "padding-bottom: 20px;>
+        <h4>or drag and drop and click on add recipt to save</h4>
+      </div>
+       
+       
+      <div id="history">
+          <div style="display: flex;">
+            <div class="lft-bx" style=" width: 50%;">
+              <h2>Manually entered expense:</h2>
+              <ul id="historyList"></ul>
+            </div>
+            <div class="rt-bx" style=" width: 50%;">
+              <h1>Receipted expense Total:</h1>
+              <h4>or drag and drop and click on add recipt to save</h4>
+              <div id="total-opt"></div>
+            
+            </div>
+          </div>
+        <div class = "words2">
+        <button onclick="toggleDropdown()" style = "margin-bottom: 30px; background-color:  #547354;">View Investment Types and Your specific Calcaluations: --></button>
+
+        <div id="myDropdown" class="dropdown-content">
+
+
+            <div class = "words" style = " border: 2px solid #333; border-radius: 10px; color: white; padding: 20px;">
+              <div id="remaining-money" style="font-size: 30px;"></div>
+              <div id="savings-box" class="result-box" style = " border: 2px solid #333; border-radius: 10px; color: white; padding: 20px;background-color: #556B2F; box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);"></div>
+              <div id="fourk-box" class="result-box" style = " border: 2px solid #333; border-radius: 10px; color: white; padding: 30px;background-color: #556B2F; box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);"></div>
+              <div id="investment-box" class="result-box" style = " border: 2px solid #333; border-radius: 10px; color: white; padding: 20px;background-color: #556B2F; box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);"> </div>
+          <h1>Financial Security: </h1>
+            <a> Investing 10% of your savings to financial security acts as a crucial safety net, statistically reducing the risk of financial crises. Studies show that even this modest amount can prevent debt accumulation during emergencies.</a>
+
+            <h1> 401(k) Plan:</h1>
+            <a> Allocating 15% of income to a 401(k) plan significantly impacts long-term financial health. Individuals with retirement savings plans are 15 times more likely to have adequate retirement savings, emphasizing the importance of this investment in securing your financial future.</a>
+
+            <h1> Investment Budget:</h1>
+            <a> Setting aside 20% of your income for an investment budget leads to wealth accumulation. According to Investopedia, making disciplined contributions to well-structured investment portfolios increases the likelihood of meeting financial goals, building resilience, and facilitating key life milestones.</a>
+             </div>
+
+          
+          </div>
+        </div>
+        
+         <a class="loading-next" href="#pg3" style ="color: white; border-radius: 4px; text-decoration: none; margin-bottom: 30px;"> Next ---></a> 
+      </div>
+        
+         <style>
+            .dropdown-content {
+              display: none;
+            }
+            .dropdown-content.active {
+              display: block;
+            }
+          </style>
+        </head>
+        <body>
+
+      
+    </div>
+
+        <script>
+          function toggleDropdown() {
+            var dropdown = document.getElementById("myDropdown");
+            dropdown.classList.toggle("active");
+          }
+        </script>
+
+    
+       
+
+        
+     
+      </div>
+      </div>
+    </div>
+</div>
+      
+      <div class = "sec1" style = "padding-top: 150px; padding-bottom: 150px;">
+    <div class="cal" id = "pg3" style = "max-width: 800px; background-color: #BCCEA5;">
+
+      <div>
+        <h1> Find out how your investments will grow over the years: </h1>
+        <label for="ageInput">Enter Your Age:</label>
+        <input type="number" id="ageInput" min="0">
+        <button onclick="generateGraph()">Generate Graph</button>
+      </div>
+      <div>
+        <canvas id="investmentChart" width="400" height="200"></canvas>
+      </div>
+    </div>
+
+
+
+      
+  </div>
+
+    
+  </section>
+
+    <script src="script.js"></script>
+
+      
+
+
+</body>
+</html>
